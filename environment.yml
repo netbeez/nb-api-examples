@@ -1,4 +1,4 @@
-name: example-environment
+name: nb-api-examples
 channels:
   - conda-forge
 dependencies:
