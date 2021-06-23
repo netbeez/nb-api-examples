@@ -1,0 +1,14 @@
+version: "2.4"
+services:
+
+  nb-api-jupyter:
+    container_name: nb-api-jupyter
+    build:
+      context: ./
+      target: release
+    image: nb-jupyter:dev
+    ports:
+      - 8888:8888
+    volumes:
+      - ./notebooks:/home/jovyan/work
+      - ./config:/home/jovyan/.jupyter
