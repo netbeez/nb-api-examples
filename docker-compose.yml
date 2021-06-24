@@ -3,12 +3,9 @@ services:
 
   nb-api-jupyter:
     container_name: nb-api-jupyter
-    build:
-      context: ./
-      target: release
-    image: nb-jupyter:dev
+    image: jupyter/tensorflow-notebook:ubuntu-20.04
     ports:
       - 8888:8888
     volumes:
-      - ./notebooks:/home/jovyan/work
+      - ./:/home/jovyan/
       - ./config:/home/jovyan/.jupyter
