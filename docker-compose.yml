@@ -3,7 +3,7 @@ services:
 
   nb-api-jupyter:
     container_name: nb-api-jupyter
-    image: jupyter/minimal-notebook:ubuntu-20.04
+    image: jupyter/datascience-notebook:ubuntu-20.04
     ports:
       - 8888:8888
     volumes:
